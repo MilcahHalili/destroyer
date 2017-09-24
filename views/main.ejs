@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset="utf-8">
+    <title>Destroyer!</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Destroyer!</h1>
+    </header>
+
+    <main>
+      <div id="statusbox">
+        <!-- Game and server messages go here -->
+        <p><%= data.serverMessage %></p>
+        <% if (!data.gameRunning) { %>
+          <button type="button">Create Game</button>
+        <% } %>
+      </div>
+      <div id="gamebox">
+        <!-- Game board appears here -->
+      </div>
+    </main>
+
+    <footer>
+      <!-- Chat will go here -->
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
